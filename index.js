@@ -68,7 +68,7 @@ async function run() {
             }
             const options = {}
             const result = await usersCollection.updateOne(query, update, options);
-            res.end(result);
+            res.send(result);
          })
 
          app.delete('/users/:id', async(req, res) => {
